@@ -1,5 +1,5 @@
 ###### Example how to intersect the data using R sctipt
-
+#In this example we are merging multiple (13) cancer data files together for the comparisons
 ###### Path for the Directory
 
 setwd("./")
@@ -20,7 +20,8 @@ l <- lapply( dat_files, read.table, sep = '\t' ) ## loading files into l
 for (i in 1:length(l)) {
   
   d  <- as.data.frame(l[[i]])  #d is temp variable
-  names(d) <- c("Gene_symbol","Gene_ID","Log2_FC","adj_P") ##extracting 2 or 3 specified coulmns from the files 
+   ##extracting specified coulmns from the files ## these col names should be same in all the files 
+  names(d) <- c("Gene_symbol","Gene_ID","Log2_FC","adj_P") ##col with gene/probe_id is must either Log2_FC or pvalue/padj can be used for this analysis
   assign(trim_names[[i]], d)   #Assigning names back 
 }
 
