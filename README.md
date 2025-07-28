@@ -1,4 +1,4 @@
-# RankerGUI
+# RankerGUI: A Computational Framework to Compare Differential Gene Expression Profiles Using Rank Based Statistics
 R script: useful for the preparation of the initial input file for RankerGUI, i.e. merging of various studies/files by logFC. 
 This page contains main script plus example files (multiple cancer studies/files).
 
